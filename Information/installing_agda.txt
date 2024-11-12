@@ -11,3 +11,5 @@ and then unzip them with:
 tar -zxvf agda-stdlib.tar
 lastly go into your agda/libraries file and add:
 $HERE/agda-stdlib-2.1.1/standard-library.agda-lib
+also can go into agda/default and add that line to 
+make it the default library.
