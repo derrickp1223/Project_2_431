@@ -1,0 +1,19 @@
+# We installed Agda using ghcup since we have it already from using Haskell,
+We do this with the two commands:
+
+```bash
+cabal update
+cabal install Agda
+```
+
+If you do not have cabal you go do ghcup tui and install it.
+
+To setup the libraries you can download them with 
+the command:
+wget -O agda-stdlib.tar https://github.com/agda/agda-stdlib/archive/v2.1.1.tar.gz
+and then unzip them with:
+tar -zxvf agda-stdlib.tar
+lastly go into your agda/libraries file and add:
+$HERE/agda-stdlib-2.1.1/standard-library.agda-lib
+also can go into agda/default and add that line to 
+make it the default library.
