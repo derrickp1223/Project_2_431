@@ -18,17 +18,6 @@ name = "To Do"
   linkCommits = [ ]
 
   [[processes.tasks]]
-  id = "kbedz0y57zvdm83pa3suiw9s"
-  title = "Future Plans"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
   id = "omeri6hezw1bc5qz6anw44m0"
   title = "Main Usage of Language"
   description = ""
@@ -52,8 +41,8 @@ name = "To Do"
 
   [[processes.tasks]]
   id = "e0m3unusay39uvccaltpr244"
-  title = "Examples of Tal Recursion"
-  description = ""
+  title = "Examples of Tail Recursion"
+  description = "<p></p>"
   tag = "backlog"
   linkFiles = [ ]
   dueDate = ""
@@ -79,6 +68,17 @@ name = "In Progress"
   [[processes.tasks]]
   id = "nioszfsoo4wd1hs6vs84e9b2"
   title = "Motivations and Characteristics"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "kbedz0y57zvdm83pa3suiw9s"
+  title = "Future Plans"
   description = ""
   tag = "backlog"
   linkFiles = [ ]
