@@ -22,9 +22,10 @@ Then unzip them with:
 tar -zxvf agda-stdlib.tar
 ```
 
-Lastly go into your agda/libraries file and add:
-
+Lastly go into your agda/libraries file or make one if it does not exist and add:
+```bash
 $HERE/agda-stdlib-2.1.1/standard-library.agda-lib
+```
 
 also can go into agda/default and add that line to 
 make it the default library.
