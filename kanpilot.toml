@@ -7,17 +7,6 @@ id = "process1"
 name = "To Do"
 
   [[processes.tasks]]
-  id = "q2h3mp1flw6q7cudw2d6vmrt"
-  title = "Shortcomings"
-  description = ""
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
-
-  [[processes.tasks]]
   id = "omeri6hezw1bc5qz6anw44m0"
   title = "Main Usage of Language"
   description = ""
@@ -79,6 +68,17 @@ name = "In Progress"
   [[processes.tasks]]
   id = "kbedz0y57zvdm83pa3suiw9s"
   title = "Future Plans"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "q2h3mp1flw6q7cudw2d6vmrt"
+  title = "Shortcomings"
   description = ""
   tag = "backlog"
   linkFiles = [ ]
