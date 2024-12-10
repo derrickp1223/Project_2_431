@@ -1,5 +1,5 @@
 # Main usage of the Agda
-# VS Code examples:
+### VS Code examples:
 
 Basic Hello, World:
 ```bash
