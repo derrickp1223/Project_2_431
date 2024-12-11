@@ -49,7 +49,7 @@ preOrder leaf = []
 preOrder (node x l r) = x ∷ (preOrder l ++ preOrder r)
 ```
 
-#### Declaraion of a list:
+#### Declaration of a list:
 ```bash
 data List (A : Set) : Set where
   []  : List A
