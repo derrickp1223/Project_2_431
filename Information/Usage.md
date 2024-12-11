@@ -35,7 +35,7 @@ main = run (putStrLn "Hello, World!")
 
 ### Data structures:
 
-#### Here is a declaration of a tree:
+#### Here is a definition of a tree:
 ```bash
 data Tree (A : Set) : Set where
   leaf : Tree A
@@ -49,7 +49,7 @@ preOrder leaf = []
 preOrder (node x l r) = x ∷ (preOrder l ++ preOrder r)
 ```
 
-#### Declaration of a list:
+#### Definition of a list:
 You can use this or import the list library with "open import Agda.Builtin.List"
 
 ```bash
@@ -60,7 +60,7 @@ data List (A : Set) : Set where
 
 Example of a list of all nature numbers, like haskell is made with lazy eval:
 ```bash
-
+blah
 ```
 
 #### Concurrency:
