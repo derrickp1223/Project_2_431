@@ -20,7 +20,7 @@ main = run (putStrLn "Hello, World!")
 ```
 #### Hello World with executible:
 
-Prints "Hellow world!" when executible is ran
+Prints "Hello, world!" when executible is ran
 - Make sure standard library is configured properly
 ```
 module hello-world where
@@ -33,10 +33,34 @@ main = run (putStrLn "Hello, World!")
 
 ---
 
-Data structures: TODO
+#### Data structures:
+
+#### Here is a declaration of a tree:
 ```bash
-blah
+data Tree (A : Set) : Set where
+  leaf : Tree A
+  node : A → Tree A → Tree A → Tree A
 ```
+
+Here is an example of a function that will show the tree in pre-order:
+```bash
+preOrder : {A : Set} → Tree A → List A
+preOrder leaf = []
+preOrder (node x l r) = x ∷ (preOrder l ++ preOrder r)
+```
+
+#### Declaraion of a list:
+```bash
+data List (A : Set) : Set where
+  []  : List A
+  _∷_ : A → List A → List A
+```
+
+Example of a list of all nature numbers, like haskell is made with lazy eval:
+```bash
+
+```
+
 Concurrency: TODO
 ```bash
 blah
