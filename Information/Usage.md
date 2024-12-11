@@ -49,8 +49,9 @@ preOrder leaf = []
 preOrder (node x l r) = x ∷ (preOrder l ++ preOrder r)
 ```
 
-#### Declaraion of a list:
+#### Declaration of a list:
 You can use this or import the list library with "open import Agda.Builtin.List"
+
 ```bash
 data List (A : Set) : Set where
   []  : List A
