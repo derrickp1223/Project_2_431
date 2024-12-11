@@ -33,7 +33,7 @@ main = run (putStrLn "Hello, World!")
 
 ---
 
-#### Data structures:
+### Data structures:
 
 #### Here is a declaration of a tree:
 ```bash
@@ -50,6 +50,7 @@ preOrder (node x l r) = x ∷ (preOrder l ++ preOrder r)
 ```
 
 #### Declaraion of a list:
+You can use this or import the list library with "open import Agda.Builtin.List"
 ```bash
 data List (A : Set) : Set where
   []  : List A
@@ -61,15 +62,36 @@ Example of a list of all nature numbers, like haskell is made with lazy eval:
 
 ```
 
-Concurrency: TODO
+#### Concurrency:
+Agda does not support concurrency.
+
+#### Map/reduce/filter:
+There are no built in map/filter/reduce functions but we can make our own.
+
+Map:
 ```bash
-blah
+map : {A B : Set} → (A → B) → List A → List B
+map _ [] = []
+map f (x ∷ xs) = f x ∷ map f xs
 ```
-Map/reduce/filter: TODO
+
+Filter:
 ```bash
-blah
+filter : {A : Set} → (A → Bool) → List A → List A
+filter _ [] = []
+filter p (x ∷ xs) with p x
+... | true  = x ∷ filter p xs
+... | false = filter p xs
 ```
-Tail recursion: TODO
+
+Reduce:
+```bash
+foldr : {A B : Set} → (A → B → B) → B → List A → B
+foldr _ acc [] = acc
+foldr f acc (x ∷ xs) = f x (foldr f acc xs)
+```
+
+#### Tail recursion: TODO
 ```bash
 blah
 ```
