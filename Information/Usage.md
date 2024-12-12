@@ -58,9 +58,10 @@ data List (A : Set) : Set where
   _∷_ : A → List A → List A
 ```
 
-Example of a list of all nature numbers, like haskell is made with lazy eval:
+Example of a basic list:
 ```bash
-blah
+myList : List Nat
+myList = 1 ∷ 2 ∷ 3 ∷ []
 ```
 
 #### Concurrency:
@@ -87,9 +88,9 @@ filter p (x ∷ xs) with p x
 
 Reduce:
 ```bash
-foldr : {A B : Set} → (A → B → B) → B → List A → B
-foldr _ acc [] = acc
-foldr f acc (x ∷ xs) = f x (foldr f acc xs)
+reduce : {A B : Set} → (A → B → B) → B → List A → B
+reduce _ z [] = z
+reduce f z (x ∷ xs) = f x (reduce f z xs)
 ```
 
 #### Tail recursion: TODO
