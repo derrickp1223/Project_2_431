@@ -36,14 +36,14 @@ main = run (putStrLn "Hello, World!")
 ### Data structures:
 
 #### Here is a definition of a tree:
-```bash
+```
 data Tree (A : Set) : Set where
   leaf : Tree A
   node : A → Tree A → Tree A → Tree A
 ```
 
 Here is an example of a function that will show the tree in pre-order:
-```bash
+```
 preOrder : {A : Set} → Tree A → List A
 preOrder leaf = []
 preOrder (node x l r) = x ∷ (preOrder l ++ preOrder r)
@@ -52,14 +52,14 @@ preOrder (node x l r) = x ∷ (preOrder l ++ preOrder r)
 #### Definition of a list:
 You can use this or import the list library with "open import Agda.Builtin.List"
 
-```bash
+```
 data List (A : Set) : Set where
   []  : List A
   _∷_ : A → List A → List A
 ```
 
 Example of a basic list:
-```bash
+```
 myList : List Nat
 myList = 1 ∷ 2 ∷ 3 ∷ []
 ```
@@ -71,14 +71,14 @@ Agda does not support concurrency.
 There are no built in map/filter/reduce functions but we can make our own.
 
 Map:
-```bash
+```
 map : {A B : Set} → (A → B) → List A → List B
 map _ [] = []
 map f (x ∷ xs) = f x ∷ map f xs
 ```
 
 Filter:
-```bash
+```
 filter : {A : Set} → (A → Bool) → List A → List A
 filter _ [] = []
 filter p (x ∷ xs) with p x
@@ -87,13 +87,19 @@ filter p (x ∷ xs) with p x
 ```
 
 Reduce:
-```bash
+```
 reduce : {A B : Set} → (A → B → B) → B → List A → B
 reduce _ z [] = z
 reduce f z (x ∷ xs) = f x (reduce f z xs)
 ```
 
-#### Tail recursion: TODO
-```bash
-blah
+#### Tail recursion:
+Basic tail recursive function that takes the sum of a list:
+```
+sumTailRecursive : List Nat → Nat → Nat
+sumTailRecursive [] acc = acc
+sumTailRecursive (x ∷ xs) acc = sumTailRecursive xs (acc + x)
+
+sum : List Nat → Nat
+sum xs = sumTailRecursive xs 0
 ```
